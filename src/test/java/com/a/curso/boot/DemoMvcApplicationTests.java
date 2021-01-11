@@ -1,4 +1,4 @@
-package com.mballem.curso.boot;
+package com.a.curso.boot;
 
 
 import org.springframework.boot.test.context.SpringBootTest;

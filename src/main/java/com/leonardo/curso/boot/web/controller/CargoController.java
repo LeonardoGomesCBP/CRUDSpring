@@ -73,15 +73,15 @@ public class CargoController {
 	}
 	
 	@GetMapping("/excluir/{id}")
-	public String excluir(@PathVariable("id") Long id, ModelMap model) {
+	public String excluir(@PathVariable("id") Long id, RedirectAttributes attr) {
+
 		
-		if (cargoService.cargoTemCargos(id)) {
-			model.addAttribute("fail", "Departamento não removido. Possui cargo(s) vinculado(s).");
+		if (cargoService.cargoTemFuncionarios(id)) {
+			attr.addFlashAttribute("fail", "Cargo não excluido. Tem funcionário(s) vinculado(s).");
 		} else {
 			cargoService.excluir(id);
-			model.addAttribute("success", "Departamento excluído com sucesso.");
+			attr.addFlashAttribute("success", "Cargo excluido com sucesso.");
 		}
-		
 		return "redirect:/cargos/listar";
 	}
 	
