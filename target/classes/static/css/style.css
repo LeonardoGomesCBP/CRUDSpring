@@ -103,7 +103,6 @@ body {
  * Footer
  */
 .layout-footer {
-	position: fixed;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -113,7 +112,7 @@ body {
 }
 
 .footer-copy {
-	font-size: 92%;
+	font-size: 80%;
 	display: block;
 	color: #777777;
 	text-align: center;
