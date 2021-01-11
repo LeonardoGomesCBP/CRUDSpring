@@ -15,10 +15,6 @@ public class Departamento extends AbstractEntity<Long> {
 	@OneToMany(mappedBy = "departamento")
 	private List<Cargo> cargos;
 
-	
-	
-	
-	
 	public String getNome() {
 		return nome;
 	}
