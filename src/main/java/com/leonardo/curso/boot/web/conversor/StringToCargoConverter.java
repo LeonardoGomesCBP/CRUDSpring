@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import com.leonardo.curso.boot.domain.Cargo;
 import com.leonardo.curso.boot.service.CargoService;
-import com.leonardo.curso.boot.service.DepartamentoService;
 
 @Component
 public class StringToCargoConverter implements Converter<String, Cargo> {
@@ -22,4 +21,5 @@ public class StringToCargoConverter implements Converter<String, Cargo> {
 		Long id = Long.valueOf(text);
 		return service.buscarPorId(id);
 	}
+
 }
